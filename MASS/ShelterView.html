@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <h1 id="shelterName">1000 Helping Hands Shelter</h1>
+    <table class="indicator" width="40%">
+      <tr>
+        <td>Food Availability</td>
+        <td id="foodavil">0</td>
+      </tr>
+      <tr>
+        <td>Bed Availability</td>
+        <td id="bedavil">0</td>
+      </tr>
+    </table>
+    <button onclick=showShelterForm()>Update</button>
+    <form id="ShelterUpdateForm">
+      <label for="Food Availability">Servings of Food</label><br>
+        <input type="number" id="shelterFoodAvil" name="shelterFoodAvil"><br>
+      <label for="Bed Availability">Available Beds</label><br>
+        <input type="number" id="shelterBedAvil" name="shelterBedAvil" value=document.getElementById("bedavil").innerHTML><br>
+      <div id="shelInvNum">
+        <p>Please enter a valid number.</p></div>
+      <button type="button" class="center" onclick=updateShelterInfo()>Update</button>
+    </form>
+    <h2>Browse restaurants nearby</h2>
+    <script>
+      var resNames = []
+      var resAddresses = []
+
+      document.addEventListener('DOMContentLoaded', function() {
+}, false);
+
+  // make card
+    function makeCard(name, address, food, time) {
+      var div = document.createElement('div');
+      div.className = 'card';
+      // creating button element  
+      var button = document.createElement('BUTTON');  
+      var text = document.createTextNode("Send Request"); 
+
+      div.innerHTML = "<h4>" + name + "<h4>";
+      div.innerHTML += "<p>" + address + "<p>";
+
+      addDataTable(div, food, time);
+      button.appendChild(text);
+      button.classList.add("center"); 
+                  
+      // appending button to div 
+      div.appendChild(button); 
+
+
+      document.body.appendChild(div);
+
+    }
+
+// make table inside card
+    function addDataTable(parentToAddTo, foodCount, time) {
+      // make table
+      var table = document.createElement('table');
+      table.style="width:100%";
+
+      // make columns
+      // add bed count
+      var bed = document.createElement('td');
+      bed.id = "FoodAvailability";
+      bed.innerHTML = "Available: " + foodCount + " serving sizes";
+      table.append(bed);
+
+      // add food count
+      var food = document.createElement('td');
+      food.id = "LastUpdated";
+      food.innerHTML = "(Last updated at " + time +")" ;
+      table.append(food);
+
+      // add table
+      parentToAddTo.append(table);
+    }
+
+    makeCard("Dunkin' Donuts","9245 Catherine Lane Hartsville, SC 29550", 50, "2:40 pm");
+    makeCard("Cheesecake Factory","212 Sheffield St. Elizabethtown, PA 17022", 12, "1:50pm");
+    makeCard("Vocelli's Pizza","16 Rockledge Road Taylors, SC 29687",2, "2:42 pm");
+
+    </script>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Login</title>
+    <h1>Más</h1>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div align="center"  >
+      <button id="userbutton" style="display: block;" onclick=showUser()>User</button>
+      <button style="display: block;" id="resbutton" onclick=showRes()>Restaurant</button>
+      <button style="display: block;" id="shelterbutton" onclick=showShel()>Shelter</button>
+    </div>
+
+    <div id="userlogin">
+      
+    </div>
+    <div id="reslogin">
+      <form action="ResView.html">
+        <label for="resemail">Restaurant Email:</label><br>
+        <input type="text" id="restaurantemail" name="fname" placeholder="Enter your email here"><br>
+        <label for="password">Password</label><br>
+        <input type="text" id="password" name="password" placeholder="Enter your password here"><br><br>
+        <input type="submit" value="Submit"></form>
+      <p>New User? <a href="signUpForm.html">Sign up here.</a></p>
+    </div>
+    <div id="shelterlogin" >
+      <form action="ShelterView.html">
+        <label for="shelemail">Shelter Email:</label><br>
+        <input type="text" id="shelteremail" name="fname" placeholder="Enter your email here"><br>
+        <label for="password">Password</label><br>
+        <input type="text" id="password" name="password" placeholder="Enter your password here"><br><br>
+        <input type="submit" value="Submit"></form>
+        <p>New User?<a href="signUpForm.html">Sign up here.</a></p>
+    </div>
+  <form></form>
+  </body>
+</html>

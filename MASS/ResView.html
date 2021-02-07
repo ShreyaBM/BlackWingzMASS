@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>RestaurantMain</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <h1>Dunkin Donuts</h1>
+    <h4>Current status: Can feed</h4>
+    <br><br>
+    <div>
+    <div class="numberCircle" id="currentAvail">5</div>
+    
+  
+    </div>
+    <form >
+      <label for="newavail">Update availability:</label><br>
+      <input type="number" id="newavail" name="newavail"><br>
+      <div id="userinvalidAvail">Please enter a valid number</div>
+      <button type="button" onclick=updateAvail()>Submit</button>
+    </form>
+    <h3>Requests from shelters</h3>
+    <div class="card">
+      <div class="container">
+        <h4>1000 Helping Hands Shelter</h4>
+        <p>60 Fairground Drive
+Shrewsbury, MA 01545</p>
+        <p>Request for 50 serving sizes</p>
+        </table>
+        <script>
+      var shelterNames = []
+      var shelterAddresses = []
+
+      document.addEventListener('DOMContentLoaded', function() {
+}, false);
+
+  // make card
+    function makeCard(name, address, request) {
+      var div = document.createElement('div');
+      div.className = 'card';
+
+      var container = document.createElement('container');
+      
+      // add container to div
+      div.append(container);
+
+      container.innerHTML = "<h4>" + name + "<h4>";
+      container.innerHTML += "<p>" + address + "<p>";
+      container.innerHTML += "<p> Request for " + request + " serving sizes <p>";
+      document.body.appendChild(div);
+    }
+
+    makeCard("Cozy Shelter","Fairway St", 20);
+
+    </script>
+
+      </div>
+    </div>
+
+    
+    
+    
+  </body>
+</html>

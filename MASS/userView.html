@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>User View</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <h1>Search for shelters</h1>
+    <a href="index.html"><button>Back to Login</button></a>
+    <form id="userGetShelters">
+      <label for="cityorzip">City or Zip Code:</label><br>
+        <input type="text" id="cityorzip" name="location" placeholder="Search by city or zip code"><br>
+      <label for="userdistance">Look within</label>
+        <select name="distance" id="userdistance">
+          <option value="Choose Distance">Choose Distance</option>
+          <option value="<1 mile"><1 mile</option>
+          <option value="<5 miles"><5 miles</option>
+          <option value="<10 miles"><10 miles</option>
+          <option value="<20 miles"><20 miles</option>
+          <option value=">20 miles"> >20 miles</option>
+        </select>
+        <br><br>
+        <div id="userinvalidinput">Please complete all questions!</div>
+        <input type="button" value="Submit" onclick=getShelters()>
+    </form>
+  </body>
+</html>

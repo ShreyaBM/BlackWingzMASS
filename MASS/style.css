@@ -1,0 +1,160 @@
+:root {
+  --turquoise: paleturquoise;
+  --darkTurquoise: #297e52;
+  --lightGreen: #70d09f;
+}
+
+body {
+  background-color: white;
+  text-align: center;
+  align-content: center;
+
+  /* text color */
+  color: var(--darkTurquoise);
+}
+div{
+  align-content: center;
+
+}
+
+/* buttons under landing page title */
+#role-buttons {
+  align: center;
+}
+
+/* buttons */
+button {
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+}
+
+/* style button & submit buttons */
+button, input[type=submit], input[type=button], #role-btn {
+  border: 0;
+  padding: 1vw;
+  margin: 10px;
+
+  width: 20vw;
+  height: 5vw;
+
+  border-radius: 12vw;
+
+  background-color: var(--lightGreen);
+  color: white;
+
+} 
+button:hover, input[type=submit]:hover, #role-btn:hover {
+    background-color: #9bd1c0;
+}
+
+form {
+  margin: 10vw;
+
+}
+
+label {
+  font-size: 3vw;
+}
+
+label, input {
+  padding: 2vw;
+  margin: 1vw;
+  height: 2vw;
+  border-radius: 2vw;
+  border-width: 0.1vw;
+}
+
+/* user distance optional */
+label[for=userdistance] {
+  color: var(--darkTurquoise);
+}
+
+
+select {
+  padding: 1vw;
+  border-radius: 2vw;
+  background: #fff;
+}
+
+
+#reslogin {
+  display: none;
+}
+
+#shelterlogin {
+  display: none;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+
+  padding: 2px 16px;
+  font-size: 3vw;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 5vw;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.numberCircle {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+
+    font: 32px Arial, sans-serif;
+}
+
+.indicator{
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center{
+  display: block; 
+  margin-left:auto;
+  margin-right: auto;
+  align-self: center;
+}
+#userinvalidinput {
+  display: none;
+}
+#userinvalidAvail{
+  display: none;
+}
+
+#ShelterUpdateForm {
+  display: none;
+}
+
+#shelInvNum {
+  display: none;
+}
+
+#sheltersignup {
+  display: none;
+}
